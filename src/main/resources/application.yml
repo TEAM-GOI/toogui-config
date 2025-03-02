@@ -1,0 +1,29 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git: #default
+          uri: ENC(6ZFL1qQD5puGs9H3jXY4jPWGe3rR7pvyDcI9JyFVfG9E1w34ZuRKQuwzzMYJeg9pQ5hcJLert6U=)
+          username: ENC(kYbvP5sjg9BltFj6+BvF1A==)
+          password: ENC(AyAGHzFRKzBQi5L9A5D3BHEW+fCHxwLNGXKXrAj5kFhG4hcHtTOwQsCRUYdyu9tcUq0nMkQ2FDI=)
+          default-label: master #??? main ?????? master ????? ???? ?? ??
+        bootstrap: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh, refresh, metrics
+
+jasypt:
+  key: ${JASYPT_KEY}
