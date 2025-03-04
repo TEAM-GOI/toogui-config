@@ -75,5 +75,5 @@ jobs:
           fi
           
           sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/toogui_back_config:latest
-          sudo docker compose up -d
+          sudo docker compose -f docker-compose-msa.yml up -d
           docker image prune -f
