@@ -13,11 +13,11 @@ spring:
           password: ENC(AyAGHzFRKzBQi5L9A5D3BHEW+fCHxwLNGXKXrAj5kFhG4hcHtTOwQsCRUYdyu9tcUq0nMkQ2FDI=)
           default-label: master #??? main ?????? master ????? ???? ?? ??
         bootstrap: true
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
 
 management:
   endpoints:
