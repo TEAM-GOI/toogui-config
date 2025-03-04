@@ -15,6 +15,6 @@ COPY ${JAR_FILE} app.jar
 # JKS 키스토어 파일 복사
 COPY apiEncryptionKey.jks ./apiEncryptionKey.jks
 
-EXPOSE 8080
+EXPOSE 8888
 # 실행 명령어
 ENTRYPOINT ["java","-jar", "app.jar"]
