@@ -10,7 +10,7 @@ spring:
         git: #default
           uri: ENC(6ZFL1qQD5puGs9H3jXY4jPWGe3rR7pvyDcI9JyFVfG9E1w34ZuRKQuwzzMYJeg9pQ5hcJLert6U=)
           username: ENC(kYbvP5sjg9BltFj6+BvF1A==)
-          password: ENC(LTkQzhjHK0Smu2YQZBEfJ6GpXb4tEMxGDgId5kJQ33+3i9gEg8RZg1jiI9OMW3r7hSzMU5TYuo8=)
+          password: ENC(UQPt2g/wVczWO9r5r2YSjHqucBGYJe1ZR2i0mGdz+EVxSYt+80i8cZMomsvTT4lM7gaaasRO6+g=)
           default-label: master #??? main ?????? master ????? ???? ?? ??
         bootstrap: true
 #  rabbitmq:
