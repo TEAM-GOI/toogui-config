@@ -56,24 +56,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.KEY }}
         script: |
-          keep_containers=("toogui-mariadb" "redis" "redis-refresh" "backend" "frontend")
-          all_containers=$(docker ps -aq)
-
-          containers_to_remove=""
-          for container_id in $all_containers; do
-            container_name=$(docker inspect --format='{{.Name}}' $container_id)
-            container_name=${container_name#/}  # Remove leading slash
-            if ! [[ " ${keep_containers[@]} " =~ " $container_name " ]]; then
-              containers_to_remove="$containers_to_remove $container_id"
-            fi
-          done
-
-          if [ -n "$containers_to_remove" ]; then
-            sudo docker rm -f $containers_to_remove
-          else
-            echo "No containers to remove"
-          fi
-          
-          sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/toogui_back_config:latest
-          sudo docker compose -f docker-compose-msa.yml up -d
+          # 최신 이미지 받기 + eureka 서비스만 교체
+          sudo docker compose -f docker-compose-msa.yml pull backend-config
+          sudo docker compose -f docker-compose-msa.yml up -d --no-deps backend-config
           docker image prune -f
