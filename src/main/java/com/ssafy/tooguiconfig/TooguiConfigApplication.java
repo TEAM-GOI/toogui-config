@@ -10,7 +10,6 @@ public class TooguiConfigApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TooguiConfigApplication.class, args);
-
     }
 
 }
